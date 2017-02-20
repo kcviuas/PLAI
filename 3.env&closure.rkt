@@ -77,6 +77,9 @@
                                  (desugar exp))])))
 
 
-;test
+
+
+
+;;test---------------------------
 (define prog (letS 'f (lamS 'x (plusS (idS 'x) (numS 1))) (appS (idS 'f) (numS 5))))
 (test (interp (desugar prog) (empty-env)) (numV 6))
